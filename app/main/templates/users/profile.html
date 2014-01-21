@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<p>{% blocktrans %}You are on the profile page {% endblocktrans  %}</p>
+<p><a href="/logout">{% trans "Logout" %}</a>, <a href="/profile/edit/">{% trans "Edit profile" %}</a></p>
+{% endblock %}

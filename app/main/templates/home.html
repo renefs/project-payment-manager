@@ -1,7 +1,12 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block title %}Home{% endblock %}
 
 {% block content %}
 <p>Estás en la página de inicio</p>
+{% if not user.is_authenticated %}
+    <p><a href="/login">{% trans "Login" %}</a></p>
+{% else %}
+     <p><a href="/logout">{% trans "Logout" %}</a>, <a href="/profile">{% trans "Profile" %}</a></p>
+{% endif %}
 {% endblock %}
