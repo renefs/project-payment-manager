@@ -39,7 +39,10 @@ def logout_user(request):
 
 @login_required
 def profile_user(request):
-    return render(request, 'users/profile.html')
+
+    user = request.user
+
+    return render(request, 'users/profile.html',{'username': user.username})
 
 
 @login_required

@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}Profile{% endblock %}
+{% block title %}
+Edit Profile
+{% endblock %}
 
 {% block content %}
-<p>{% blocktrans %}You are on the profile page {% endblocktrans  %}</p>
-
+<h3>Edit Profile</h3>
     <p>Nombre de usuario: {{ username }}</p>
 
     {% if form.errors %}
@@ -19,6 +20,12 @@
         {% csrf_token %}
         <input type="submit" value="Submit">
     </form>
+{%endblock%}
 
+{% block sidebar %}
+<p>{% blocktrans %}You are on the profile page {% endblocktrans  %}</p>
+{% endblock %}
+
+{% block footer %}
 <p><a href="/logout">{% trans "Logout" %}</a></p>
 {% endblock %}

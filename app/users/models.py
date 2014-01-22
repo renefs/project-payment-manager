@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 # Create your models here.
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    #other fields here
-    website=models.URLField()
     datosFacturacion = models.ForeignKey('DatosFacturacion')
 
-    verbose_name_plural="Perfiles de usuario"
+    #other fields here
+    horas_disponibles=models.FloatField()
+    website=models.URLField()
 
     def __unicode__(self):
         return "Perfil de %s" % self.user

@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}Add Project{% endblock %}
+{% block title %}
+Project Details
+{% endblock %}
 
 {% block content %}
+<h3>Project Details</h3>
 <p>{% blocktrans %}You are on the Add Project page {% endblocktrans  %}</p>
+{% endblock %}
 
+{% block footer %}
 
-
-<p><a href="/logout">{% trans "Logout" %}</a></p>
 {% endblock %}

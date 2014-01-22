@@ -4,6 +4,75 @@
 {% block title %}Profile{% endblock %}
 
 {% block content %}
-<p>{% blocktrans %}You are on the profile page {% endblocktrans  %}</p>
-<p><a href="/logout">{% trans "Logout" %}</a>, <a href="/profile/edit/">{% trans "Edit profile" %}</a></p>
+    <h3>{% trans "Profile" %}</h3>
+    <p>¡Hola <strong>{{ username }}</strong>! Este es tu perfil.</p>
+
+    <p>Tienes {{ horas_disponibles }} horas disponibles</p>
+
+    <h4>Proyectos en curso</h4>
+
+        <table>
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+
+    <h4>Proyectos finalizados</h4>
+
+        <table>
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+
 {% endblock %}
