@@ -6,6 +6,8 @@
 {% block content %}
 <p>{% blocktrans %}You are on the profile page {% endblocktrans  %}</p>
 
+    <p>Nombre de usuario: {{ username }}</p>
+
     {% if form.errors %}
         <p style="color: red;">Please correct the error{{ form.errors|pluralize }} below.</p>
     {% endif %}

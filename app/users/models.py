@@ -18,12 +18,11 @@ class DatosFacturacion(models.Model):
 
     first_name=models.CharField(max_length=100)
     last_name=models.CharField(max_length=100)
+    cif_nif=models.CharField(max_length=100)
     address=models.CharField(max_length=300)
     city=models.CharField(max_length=100)
     province=models.CharField(max_length=100)
     country=models.CharField(max_length=100)
-
-    verbose_name_plural="Datos de Facturacion"
 
     def __unicode__(self):
           return "Datos de facturacion de %s" % self.first_name
