@@ -19,7 +19,7 @@ class Proyecto(models.Model):
     descripcion=models.TextField()
 
     #precio = MoneyField(max_digits=10, decimal_places=2, default_currency='EUR')
-    tiempo_estimado_en_minutos=models.FloatField(default=0)
+    tiempo_estimado_en_horas=models.FloatField(default=0)
     pagado = models.BooleanField(choices=BOOLEAN_CHOICES,default=0)
     numero_veces_descartado_por_cliente= models.IntegerField(default=0)
     cancelado = models.BooleanField(choices=BOOLEAN_CHOICES,default=0)
@@ -40,15 +40,5 @@ class Tarea(models.Model):
 
     def __unicode__(self):
           return "Tarea {0} de {1}" .format(self.titulo, self.proyecto)
-
-class DatosPago(models.Model):
-
-    proyecto = models.OneToOneField(Proyecto)
-    cliente = models.OneToOneField(User)
-
-    cantidad = MoneyField(max_digits=10, decimal_places=2, default_currency='EUR')
-    fecha = models.DateTimeField()
-    metodoPago = models.CharField(max_length=100)
-    identificador = models.TextField()
 
 

@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from projects.models import Proyecto,DatosPago
+from projects.models import Proyecto
 
 admin.site.register(Proyecto)
-admin.site.register(DatosPago)

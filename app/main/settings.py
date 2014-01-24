@@ -36,11 +36,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Custom apps
     'users',
     'projects',
     'messages',
-    'moneyed',
-    'djmoney',
+    'shop',
+    #3rd party
+    'moneyed', # https://github.com/limist/py-moneyed
+    'djmoney', # https://github.com/jakewins/django-money/tree/master/djmoney
+    'django_settings', # https://github.com/jqb/django-settings
 )
 
 MIDDLEWARE_CLASSES = (
